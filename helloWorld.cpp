@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-  int a = 10000;
-  int b = 10000;
+  int a;
+  int b;
 
   cin >> a;
   cin >> b;
