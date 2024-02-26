@@ -2,9 +2,12 @@
 #ifndef SET_H
 #define SET_H
 
-#endif // SET_H
+class Set {
+private:
+  T* items[];
 
-// void add(type item)
-// int getSize() const
-// void remove(type item)
-// void clear()
+public:
+  Set();
+};
+
+#endif // SET_H
