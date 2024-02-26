@@ -5,10 +5,11 @@ using namespace std;
 
 int main()
 {
-  string returnstring;
-  cout << "Enter your sentence: ";
-  cin >> returnstring;
-  cout << returnstring << endl;
-  cout << "Hello, World!" << endl;
+  int a;
+  int b;
+  a = 1;
+  b = 2;
+
+  cout << a + b << endl;
   return 0;
 }
