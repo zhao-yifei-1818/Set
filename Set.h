@@ -14,11 +14,13 @@ public:
   Set();                                          // initial capacity of 8
   Set(const Set& other);                          // copy constructor
   Set<T>& Set<T>::operator=(const Set<T>& other); // assignment operator
-  ~Set();
+  ~Set();                                         // destructor
+
   void add(T item);
   int getSize() const;
   void remove(T item);
   void clear();
+
   T removeSmallest();
   bool operator==(const Set& other) const;
   string toString() const;
@@ -65,5 +67,11 @@ Set<T>& Set<T>::operator=(const Set<T>& other)
   }
   return *this;
 } // assignment operator
+
+template<typename T>
+void add(T item)
+{
+  item[currentsize] = item
+}
 
 #endif // SET_H
