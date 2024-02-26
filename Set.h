@@ -71,7 +71,7 @@ Set<T>& Set<T>::operator=(const Set<T>& other)
 template<typename T>
 void add(T item)
 {
-  item[currentsize] = item
+  this.item[currentsize] = item;
 }
 
 #endif // SET_H
