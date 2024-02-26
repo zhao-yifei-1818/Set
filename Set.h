@@ -46,19 +46,20 @@ Set<T>::Set(const Set<T>& other)
   for (int i = 0; i < capacity; i++)
     item[i] = other.item[i];
 } // Copy constructor
+
 template<typename T>
-Set& Set::operator=(const Set& other)
+Set<T>& Set<T>::operator=(const Set<T>& other)
 {
   if (&other != this) {
-    delete[] item;
-    item = new T[other.capacity];
-    this->currentSize = other.currentSize;
-    this->capacity = other.capacity;
-    item = new T[capacity];
-    for (int i = 0; i < capacity; i++)
-      item[i] = other.item[i];
+    return *this;
   }
-  return *this;
-}
+  currentSize = other.currentSize;
+  capacity = other.capacity;
+  delete[] item;
+  item = new T[other.capacity];
+  item = new T[capacity];
+  for (int i = 0; i < capacity; i++)
+    item[i] = other.item[i];
+} // assignment operator
 
 #endif // SET_H
