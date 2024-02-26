@@ -1,6 +1,9 @@
 
 #ifndef SET_H
 #define SET_H
+#include <iostream>
+#include <sstream>
+using namespace std;
 template<typename T>
 class Set {
 private:
