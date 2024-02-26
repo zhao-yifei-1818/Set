@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
+  string returnstring;
+  cin >> "enter your sentence:" >> returnstring;
   cout << "Hello World" << endl;
   return 0;
 }
