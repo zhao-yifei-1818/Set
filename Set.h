@@ -46,5 +46,19 @@ Set<T>::Set(const Set<T>& other)
   for (int i = 0; i < capacity; i++)
     item[i] = other.item[i];
 } // Copy constructor
+template<typename T>
+Set& Set::operator=(const Set& other)
+{
+  if (&other != this) {
+    delete[] item;
+    item = new T[other.capacity];
+    this->height = other.height;
+    this->width = other.width;
+    item = new T[capacity];
+    for (int i = 0; i < capacity; i++)
+      item[i] = other.item[i];
+  }
+  return *this;
+}
 
 #endif // SET_H
