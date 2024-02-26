@@ -59,8 +59,10 @@ Set<T>& Set<T>::operator=(const Set<T>& other)
   capacity = other.capacity;
   delete[] item;
   item = new T[other.capacity];
-  for (int i = 0; i < capacity; i++)
+  for (int i = 0; i < capacity; i++) {
     item[i] = other.item[i];
+  }
+  return *this;
 } // assignment operator
 
 #endif // SET_H
