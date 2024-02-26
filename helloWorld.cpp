@@ -10,6 +10,6 @@ int main()
   cin >> a;
   cin >> b;
 
-  cout << a + b << endl;
+  cout << (a * b) / 2 << endl;
   return 0;
 }
