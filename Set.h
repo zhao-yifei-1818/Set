@@ -52,8 +52,8 @@ Set& Set::operator=(const Set& other)
   if (&other != this) {
     delete[] item;
     item = new T[other.capacity];
-    this->height = other.height;
-    this->width = other.width;
+    this->currentSize = other.currentSize;
+    this->capacity = other.capacity;
     item = new T[capacity];
     for (int i = 0; i < capacity; i++)
       item[i] = other.item[i];
