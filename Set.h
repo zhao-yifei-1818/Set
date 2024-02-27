@@ -165,4 +165,15 @@ string Set<T>::toString() const
   return returnstring;
 }
 
+template<typename T>
+Set<T> Set<T>::intersectionWith(const Set<T>& other) const
+{
+  Set<T> intersection;
+  for (int i = 0; i < currentSize; i++) {
+    if (other.contains(items[i])) {
+      intersection.add(items[i]);
+    }
+  }
+  return intersection;
+}
 #endif // SET_H
