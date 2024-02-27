@@ -120,4 +120,34 @@ void Set<T>::clear()
   currentSize = 0;
 }
 
+template<typename T>
+T Set<T>::removeSmallest()
+{
+  if (currentSize == 0) {
+    throw runtime_error("Set is empty");
+  }
+  int minIndex = 0;
+  for (int i = 1; i < currentSize; i++) {
+    if (items[i] < items[minIndex]) {
+      minIndex = i;
+    }
+  }
+  T smallest = items[minIndex];
+  items[minIndex] = items[--currentSize];
+  return smallest;
+}
+
+template<typename T>
+bool Set<T>::operator==(const Set& other) const
+{
+  if (currentSize != other.currentSize) {
+    return false;
+  }
+  for (int i = 0; i < currentSize; i++) {
+    if (!other.contains(items[i])) {
+      return false;
+    }
+  }
+  return true;
+}
 #endif // SET_H
