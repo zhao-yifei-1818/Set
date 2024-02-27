@@ -235,21 +235,21 @@ TEST_CASE("Operator==")
 }
 
 // // NOTE - you only need this OR StreamInsertion, not both tests
-// TEST_CASE("ToString")
-// {
-//   cout << "10 - Testing ToString" << endl;
+TEST_CASE("ToString")
+{
+  cout << "10 - Testing ToString" << endl;
 
-//   Set<int> s;
-//   string str1 = s.toString();
-//   REQUIRE(str1 == "{}");
+  Set<int> s;
+  string str1 = s.toString();
+  REQUIRE(str1 == "{}");
 
-//   s.add(1);
-//   s.add(2);
-//   s.add(3);
+  s.add(1);
+  s.add(2);
+  s.add(3);
 
-//   string str2 = s.toString();
-//   REQUIRE(str2 == "{1, 2, 3}");
-// }
+  string str2 = s.toString();
+  REQUIRE(str2 == "{1, 2, 3}");
+}
 
 // //NOTE - you only need this OR toString, not both tests
 // TEST_CASE( "StreamInsertion" ) {
