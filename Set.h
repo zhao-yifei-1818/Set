@@ -32,7 +32,7 @@ Set<T>::Set()
 {
   currentSize = 0;
   capacity = 8;
-  item = new T[capacity];
+  items = new T[capacity];
 } // no arg constructor
 
 template<typename T>
