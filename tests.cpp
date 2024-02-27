@@ -272,27 +272,27 @@ TEST_CASE("ToString")
 //     REQUIRE( str2 == "{1, 2, 3}" );
 // }
 
-// TEST_CASE("Intersection")
-// {
-//   cout << "11 - Testing intersectionWith" << endl;
-//   Set<int> s;
-//   Set<int> s2;
-//   Set<int> s3;
+TEST_CASE("Intersection")
+{
+  cout << "11 - Testing intersectionWith" << endl;
+  Set<int> s;
+  Set<int> s2;
+  Set<int> s3;
 
-//   for (int i = 0; i <= 100; i += 2)
-//     s.add(i);
+  for (int i = 0; i <= 100; i += 2)
+    s.add(i);
 
-//   for (int i = 0; i <= 100; i += 5)
-//     s2.add(i);
+  for (int i = 0; i <= 100; i += 5)
+    s2.add(i);
 
-//   for (int i = 10; i <= 16; i++)
-//     s3.add(i);
+  for (int i = 10; i <= 16; i++)
+    s3.add(i);
 
-//   Set<int> s4 = s.intersectionWith(s2);
-//   Set<int> s5 = s3.intersectionWith(s);
+  Set<int> s4 = s.intersectionWith(s2);
+  Set<int> s5 = s3.intersectionWith(s);
 
-//   REQUIRE(s4.getSize() == 11);
-//   REQUIRE(s4.contains(10));
-//   REQUIRE(!s4.contains(12));
-//   REQUIRE(s5.getSize() == 4);
-// }
+  REQUIRE(s4.getSize() == 11);
+  REQUIRE(s4.contains(10));
+  REQUIRE(!s4.contains(12));
+  REQUIRE(s5.getSize() == 4);
+}
