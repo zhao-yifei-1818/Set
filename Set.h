@@ -11,10 +11,10 @@ private:
   int capacity;
 
 public:
-  Set();                                          // initial capacity of 8
-  Set(const Set& other);                          // copy constructor
-  Set<T>& Set<T>::operator=(const Set<T>& other); // assignment operator
-  ~Set();                                         // destructor
+  Set();                                  // initial capacity of 8
+  Set(const Set& other);                  // copy constructor
+  Set<T>& operator=(const Set<T>& other); // assignment operator
+  ~Set();                                 // destructor
 
   void add(T item);
   int getSize() const;
