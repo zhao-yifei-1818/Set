@@ -81,10 +81,44 @@ bool Set<T>::contains(T item) const
   return false;
 }
 
-// template<typename T>
-// void add(T item)
-// {
-//   this.item[currentsize] = item;
-// }
+template<typename T>
+void Set<T>::add(T item)
+{
+  if (!contains(item)) {
+    if (currentSize == capacity) {
+      capacity *= 2;
+      T* newItems = new T[capacity];
+      for (int i = 0; i < currentSize; i++) {
+        newItems[i] = items[i];
+      }
+      delete[] items;
+      items = newItems;
+    }
+    items[currentSize++] = item;
+  }
+}
+
+template<typename T>
+int Set<T>::getSize() const
+{
+  return currentSize;
+}
+
+template<typename T>
+void Set<T>::remove(T item)
+{
+  for (int i = 0; i < currentSize; i++) {
+    if (items[i] == item) {
+      items[i] = items[--currentSize];
+      return;
+    }
+  }
+}
+
+template<typename T>
+void Set<T>::clear()
+{
+  currentSize = 0;
+}
 
 #endif // SET_H
