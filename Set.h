@@ -156,12 +156,12 @@ string Set<T>::toString() const
   string returnstring;
   returnstring = "{";
   for (int i = 0; i < currentSize; i++) {
-    returnstring << items[i];
+    returnstring += items[i];
     if (i != currentSize - 1) {
-      returnstring << ", ";
+      returnstring += ", ";
     }
   }
-  returnstring << "}";
+  returnstring += "}";
   return returnstring.str();
 }
 
