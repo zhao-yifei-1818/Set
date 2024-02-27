@@ -156,7 +156,7 @@ string Set<T>::toString() const
   string returnstring;
   returnstring = "{";
   for (int i = 0; i < currentSize; i++) {
-    returnstring += to_string(items[i];) if (i != currentSize - 1)
+    returnstring += to_string(items[i]) if (i != currentSize - 1)
     {
       returnstring += ", ";
     }
