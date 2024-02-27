@@ -16,7 +16,7 @@ public:
   Set<T>& operator=(const Set<T>& other); // assignment operator
   ~Set();                                 // destructor
 
-  bool contains(type item) const;
+  bool contains(T item) const;
 
   void add(T item);
   int getSize() const;
