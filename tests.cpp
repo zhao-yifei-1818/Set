@@ -37,22 +37,22 @@ TEST_CASE("Constructor/Add/Contains")
   REQUIRE(s.contains('B'));
 }
 
-// TEST_CASE("getSize")
-// {
-//   cout << "2 - Testing getSize" << endl;
-//   Set<char> s;
-//   REQUIRE(s.getSize() == 0);
+TEST_CASE("getSize")
+{
+  cout << "2 - Testing getSize" << endl;
+  Set<char> s;
+  REQUIRE(s.getSize() == 0);
 
-//   s.add('A');
-//   REQUIRE(s.getSize() == 1);
+  s.add('A');
+  REQUIRE(s.getSize() == 1);
 
-//   s.add('B');
-//   s.add('C');
-//   REQUIRE(s.getSize() == 3);
+  s.add('B');
+  s.add('C');
+  REQUIRE(s.getSize() == 3);
 
-//   s.add('A');
-//   REQUIRE(s.getSize() == 3);
-// }
+  s.add('A');
+  REQUIRE(s.getSize() == 3);
+}
 
 // TEST_CASE("Grow")
 // {
