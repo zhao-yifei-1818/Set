@@ -6,7 +6,7 @@ using namespace std;
 template<typename T>
 class Set {
 private:
-  T* item;
+  T* items;
   int currentSize;
   int capacity;
 
