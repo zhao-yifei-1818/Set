@@ -60,9 +60,9 @@ Set<T>& Set<T>::operator=(const Set<T>& other)
   if (&other != this) {
     return *this;
   }
+  delete[] items;
   currentSize = other.currentSize;
   capacity = other.capacity;
-  delete[] items;
   items = new T[other.capacity];
   for (int i = 0; i < capacity; i++) {
     items[i] = other.items[i];
@@ -81,9 +81,6 @@ bool Set<T>::contains(T item) const
   return false;
 }
 
-// bool Set::contains(type item) const{
-
-// }
 // template<typename T>
 // void add(T item)
 // {
