@@ -124,7 +124,7 @@ template<typename T>
 T Set<T>::removeSmallest()
 {
   if (currentSize == 0) {
-    throw runtime_error("Set is empty");
+    throw out_of_range("Set is empty");
   }
   int minIndex = 0;
   for (int i = 1; i < currentSize; i++) {
