@@ -165,74 +165,74 @@ TEST_CASE("AssignmentOp")
   }
 }
 
-// TEST_CASE("Clear")
-// {
-//   cout << "7 - Testing Clear" << endl;
+TEST_CASE("Clear")
+{
+  cout << "7 - Testing Clear" << endl;
 
-//   Set<char> s;
-//   s.add('A');
-//   s.add('B');
-//   s.clear();
-//   REQUIRE(s.getSize() == 0);
-//   REQUIRE(!s.contains('A'));
-//   REQUIRE(!s.contains('B'));
-// }
+  Set<char> s;
+  s.add('A');
+  s.add('B');
+  s.clear();
+  REQUIRE(s.getSize() == 0);
+  REQUIRE(!s.contains('A'));
+  REQUIRE(!s.contains('B'));
+}
 
-// TEST_CASE("RemoveSmallest")
-// {
-//   cout << "8 - Testing removeSmallest" << endl;
-//   Set<int> s;
-//   s.add(20);
-//   s.add(5);
-//   s.add(30);
-//   s.add(10);
-//   s.add(25);
-//   s.add(15);
+TEST_CASE("RemoveSmallest")
+{
+  cout << "8 - Testing removeSmallest" << endl;
+  Set<int> s;
+  s.add(20);
+  s.add(5);
+  s.add(30);
+  s.add(10);
+  s.add(25);
+  s.add(15);
 
-//   int temp = s.removeSmallest();
-//   REQUIRE(temp == 5);
-//   REQUIRE(!s.contains(5));
-//   REQUIRE(s.getSize() == 5);
+  int temp = s.removeSmallest();
+  REQUIRE(temp == 5);
+  REQUIRE(!s.contains(5));
+  REQUIRE(s.getSize() == 5);
 
-//   temp = s.removeSmallest();
-//   REQUIRE(temp == 10);
-//   REQUIRE(!s.contains(10));
-//   REQUIRE(s.getSize() == 4);
+  temp = s.removeSmallest();
+  REQUIRE(temp == 10);
+  REQUIRE(!s.contains(10));
+  REQUIRE(s.getSize() == 4);
 
-//   temp = s.removeSmallest();
-//   REQUIRE(temp == 15);
-//   REQUIRE(!s.contains(15));
-//   REQUIRE(s.getSize() == 3);
+  temp = s.removeSmallest();
+  REQUIRE(temp == 15);
+  REQUIRE(!s.contains(15));
+  REQUIRE(s.getSize() == 3);
 
-//   REQUIRE(s.contains(20));
-//   REQUIRE(s.contains(25));
-//   REQUIRE(s.contains(30));
-// }
+  REQUIRE(s.contains(20));
+  REQUIRE(s.contains(25));
+  REQUIRE(s.contains(30));
+}
 
-// TEST_CASE("Operator==")
-// {
-//   cout << "9 - Testing operator==" << endl;
-//   Set<int> s;
-//   for (int i = 1; i <= 4; i++)
-//     s.add(i);
-//   // s = 1,2,3,4
+TEST_CASE("Operator==")
+{
+  cout << "9 - Testing operator==" << endl;
+  Set<int> s;
+  for (int i = 1; i <= 4; i++)
+    s.add(i);
+  // s = 1,2,3,4
 
-//   Set<int> s2;
-//   for (int i = 5; i >= 1; i--)
-//     s2.add(i);
-//   // s2 = 5,4,3,2,1
+  Set<int> s2;
+  for (int i = 5; i >= 1; i--)
+    s2.add(i);
+  // s2 = 5,4,3,2,1
 
-//   bool areEqualResult = s == s2;
-//   REQUIRE(areEqualResult == false);
+  bool areEqualResult = s == s2;
+  REQUIRE(areEqualResult == false);
 
-//   s.add(5); // s = 1,2,3,4,5
-//   areEqualResult = s == s2;
-//   REQUIRE(areEqualResult == true);
+  s.add(5); // s = 1,2,3,4,5
+  areEqualResult = s == s2;
+  REQUIRE(areEqualResult == true);
 
-//   s.add(6); // s = 1,2,3,4,5,6
-//   areEqualResult = s == s2;
-//   REQUIRE(areEqualResult == false);
-// }
+  s.add(6); // s = 1,2,3,4,5,6
+  areEqualResult = s == s2;
+  REQUIRE(areEqualResult == false);
+}
 
 // // NOTE - you only need this OR StreamInsertion, not both tests
 // TEST_CASE("ToString")
