@@ -150,4 +150,19 @@ bool Set<T>::operator==(const Set& other) const
   }
   return true;
 }
+template<typename T>
+string Set<T>::toString() const
+{
+  string returnstring;
+  returnstring = "{";
+  for (int i = 0; i < currentSize; i++) {
+    returnstring << items[i];
+    if (i != currentSize - 1) {
+      returnstring << ", ";
+    }
+  }
+  returnstring << "}";
+  return returnstring.str();
+}
+
 #endif // SET_H
