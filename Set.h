@@ -128,11 +128,12 @@ T Set<T>::removeSmallest()
   }
   int minIndex = 0;
   for (int i = 1; i < currentSize; i++) {
+    // look right to store smallest at left
     if (items[i] < items[minIndex]) {
       minIndex = i;
     }
   }
-  T smallest = items[minIndex];
+  T smallest = items[minIndex]; // store it
   items[minIndex] = items[--currentSize];
   return smallest;
 }
