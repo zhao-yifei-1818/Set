@@ -38,7 +38,7 @@ Set<T>::Set()
 template<typename T>
 Set<T>::~Set()
 {
-  delete[] item;
+  delete[] items;
 } // Destructor
 
 template<typename T>
