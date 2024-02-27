@@ -54,19 +54,19 @@ TEST_CASE("getSize")
   REQUIRE(s.getSize() == 3);
 }
 
-// TEST_CASE("Grow")
-// {
-//   cout << "3 - Testing Grow" << endl;
-//   Set<int> s;
+TEST_CASE("Grow")
+{
+  cout << "3 - Testing Grow" << endl;
+  Set<int> s;
 
-//   for (int i = 0; i < 1000; i++)
-//     s.add(i);
+  for (int i = 0; i < 1000; i++)
+    s.add(i);
 
-//   for (int i = 0; i < 1000; i++)
-//     REQUIRE(s.contains(i));
+  for (int i = 0; i < 1000; i++)
+    REQUIRE(s.contains(i));
 
-//   REQUIRE(s.getSize() == 1000);
-// }
+  REQUIRE(s.getSize() == 1000);
+}
 
 // TEST_CASE("Remove")
 // {
