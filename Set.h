@@ -134,7 +134,8 @@ T Set<T>::removeSmallest()
     }
   }
   T smallest = items[minIndex]; // store it
-  items[minIndex] = items[--currentSize];
+  items[minIndex] =
+      items[--currentSize]; // last item goes to the replaced smallest item
   return smallest;
 }
 
