@@ -67,7 +67,17 @@ Set<T>& Set<T>::operator=(const Set<T>& other)
   }
   return *this;
 } // assignment operator
-// template<typename T>
+template<typename T>
+bool Set<T>::contains(T item) const
+{
+  for (int i = 0; i < currentSize; i++) {
+    if (items[i] == item) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // bool Set::contains(type item) const{
 
 // }
