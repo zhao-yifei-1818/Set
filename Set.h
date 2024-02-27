@@ -58,14 +58,13 @@ template<typename T>
 Set<T>& Set<T>::operator=(const Set<T>& other)
 {
   if (&other != this) {
-    return *this;
-  }
-  delete[] items;
-  currentSize = other.currentSize;
-  capacity = other.capacity;
-  items = new T[other.capacity];
-  for (int i = 0; i < capacity; i++) {
-    items[i] = other.items[i];
+    delete[] items;
+    currentSize = other.currentSize;
+    capacity = other.capacity;
+    items = new T[capacity];
+    for (int i = 0; i < currentSize; i++) {
+      items[i] = other.items[i];
+    }
   }
   return *this;
 } // assignment operator
